@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define the Alien bean with singleton scope -->
+    <!-- Singleton scope means only one instance of this bean will be created in the Spring container -->
+    <bean id="alien" class="com.sahil.model.Alien" scope="singleton">
+        <!-- Setter injection: injecting the 'age' property with a value of 21 -->
+        <property name="age" value="21"/>
+        <!-- Setter injection: injecting the 'lap' property with the reference attribute to the 'laptop1' bean -->
+        <property name="lap" ref="laptop1"/>
+        <!-- This is called setter injection because we're using the setter methods to inject dependencies -->
+    </bean>
+
+    <!-- Uncomment the below bean definition to use prototype scope -->
+    <!--
+    <bean id="alien" class="com.sahil.model.Alien" scope="prototype"/>
+    -->
+    <!-- Prototype scope means a new instance of the bean is created each time getBean() is called -->
+
+    <!-- Define the Laptop bean -->
+    <!-- The Laptop bean will be created only when it is referenced in the Alien bean -->
+    <bean id="laptop1" class="com.sahil.model.Laptop"/>
+</beans>
