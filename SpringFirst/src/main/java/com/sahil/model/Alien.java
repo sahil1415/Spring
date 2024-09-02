@@ -4,10 +4,18 @@ public class Alien {
 
     private int age;
     private Laptop lap;
+    private int salary;
 
     // Default constructor: called when the Alien bean is created.
     public Alien() {
-        System.out.println("Alien Object Created");
+        System.out.println("Default Constructor of Alien");
+    }
+    public Alien(int age, Laptop lap){
+
+        this.age = age;
+        this.lap = lap;
+//        this.salary = salary;
+        System.out.println("Para const called");
     }
 
     // Getter and setter for 'age'

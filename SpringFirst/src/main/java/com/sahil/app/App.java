@@ -17,12 +17,13 @@ public class App {
         Alien alien2 = (Alien) context.getBean("alien");
 
         // Calling the code() method on the alien1 instance.
+        System.out.println(alien1.getAge());
         alien1.code();
 
         // Since alien1 and alien2 are the same instance, changes to one will affect the other.
         // Uncomment below to test:
         // alien1.setAge(25);
-        // System.out.println(alien2.getAge()); // Should print 25
+//         System.out.println(alien2.getAge()); // Should print 25
 
         // Using prototype scope would create a new instance each time getBean() is called.
         // Uncomment the prototype scope configuration in beans.xml and observe the difference.

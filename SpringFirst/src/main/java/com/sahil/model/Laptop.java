@@ -9,6 +9,6 @@ public class Laptop {
 
     // Method that simulates compiling code
     public void compile() {
-        System.out.println("Code Compiling...");
+        System.out.println("Code Compiling... in Laptop");
     }
 }
