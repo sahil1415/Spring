@@ -7,8 +7,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    @Bean
-    public Alien alien(){
+    // Define a bean of type Alien with the name 'Programmer'
+    @Bean(name = {"Programmer", "Alien", "Coder"})
+    public Alien alien() {
         return new Alien();
     }
 }
