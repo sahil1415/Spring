@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definition for Alien with a dependency on Computer -->
+<!--    <bean id="alien" class="com.sahil.model.Alien" autowire="byType">-->
+<!--        <property name="id" value="13150"/>-->
+<!--        &lt;!&ndash;        <property name="com" ref="laptop"/>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <property name="com" ref ="desktop"/>&ndash;&gt;-->
+<!--    </bean>-->
+
+
+<!--        if we want the object will be used by alien class only we can create inner bean-->
+
+    <bean id="alien" class="com.sahil.model.Alien" autowire="byType">
+        <property name="id" value="13150"/>
+        <property name="com">
+            <bean id="lap" class="com.sahil.model.Laptop" primary="true" lazy-init="true"/>
+        </property>
+    </bean>
+<!--    <bean id="laptop" class="com.sahil.model.Laptop" primary="true"/>-->
+<!--    lazy bean initialization-->
+    <bean id="laptop" class="com.sahil.model.Laptop" primary="true" lazy-init="true"/>
+    <bean id="desktop" class="com.sahil.model.Desktop" lazy-init="true"/>
+
+</beans>
