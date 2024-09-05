@@ -11,10 +11,11 @@ public class App {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         // Retrieve the 'Programmer' bean of type Alien from the context
-        Alien alien = context.getBean("Programmer", Alien.class);
-
+        Alien alien1 = context.getBean("Programmer", Alien.class);
+        Alien alien2 = context.getBean("Coder", Alien.class);
         // Call the code method on the Alien bean
-        alien.code();
+        alien1.code();
+        alien2.code();
 
         // Close the context to release resources
         context.close();
