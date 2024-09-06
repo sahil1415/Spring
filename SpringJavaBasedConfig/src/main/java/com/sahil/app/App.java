@@ -16,7 +16,7 @@ public class App {
         // Call the code method on the Alien bean
 
 //        alien2.code();
-        alien1.setAge(21);
+//        alien1.setAge(21);
         System.out.println(alien1.getAge());
         alien1.code();
         // Close the context to release resources

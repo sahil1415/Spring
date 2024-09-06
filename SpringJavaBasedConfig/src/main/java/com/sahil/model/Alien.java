@@ -3,7 +3,7 @@ package com.sahil.model;
 public class Alien {
     private String name;
     private int age;
-    private Laptop lap;
+    private Computer com;
 
     // Default constructor with a print statement for debugging
     public Alien() {
@@ -26,18 +26,18 @@ public class Alien {
         this.age = age;
     }
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getCom() {
+        return com;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setCom(Computer com) {
+        this.com = com;
     }
 
     // Method that simulates the Alien coding
     public void code() {
         System.out.println("Alien is coding");
-        lap.compile();
+        com.compile();
 
     }
 }
