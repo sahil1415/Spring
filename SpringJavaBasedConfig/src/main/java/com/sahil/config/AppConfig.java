@@ -20,6 +20,8 @@ public class AppConfig {
 //        obj.setAge(28);            // either we can use qualifier or primary
 //        obj.setCom(com);
 //        return obj;
+
+
 //    }
 //
 //    @Bean
