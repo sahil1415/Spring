@@ -1,10 +1,10 @@
-package com.sahil.SpringFirstProject;
+package com.sahil.SpringJDBCFirst;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringFirstProjectApplicationTests {
+class SpringJdbcFirstApplicationTests {
 
 	@Test
 	void contextLoads() {
